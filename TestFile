@@ -40,3 +40,18 @@ Note: Keep on doing git commit to lock your latest changes incrementally , rathe
 ===========================================================
 
 **Learning Automation** staying focused -- completely new
+
+***********************************************************************
+Learning Git // writing codes--- Ashumi
+
+package com.findelements;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello World");
+	}
+}
+
+=======================================================================
