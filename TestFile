@@ -1,8 +1,42 @@
+
+This is test file to get started
+
+Creating Test Steps
+
+Step 1: Open CMD and check if Git is present
+Step 2: Downloaded Git
+Step 3: Create a GITHub Login on the Website.
+Step 4: Check The GIT Verion on Terminal : git --version
+=======
 New line from Ashumi 
 <h1> this is header </h1>
 This is test file to get start
 Adding new line
 
+<<<<<<< HEAD
 <h2> New Change </h2>
 Trying to add this in an existing file
 Learning Git
+=======
+============= GIT WORKFLOW STEPS =======================================
+Basically we need to follow below GIT workflow whenever you are working with GIT repo
+
+Workflow without Branching 
+-------------------------------
+Step 1: Git clone <URL for the repo>
+Do your changes in the cloned code, add new files etc 
+
+Step 2: Git status   (here you may see Untracked changes)
+
+Step 3: Git add -A (to all all new things like changes to the file as well as new files)
+
+Step 4: Git status (now you will notice your new files are added in changes to be committed)
+
+Step 5: Git commit -m “message like FINTAX-12345” (commit is simply to lock your code changes and it’s not actually committed/synced to the git main repo)
+
+Step 6: Git push   (this is the final command which will push your changes to the git repo)
+
+Note: Keep on doing git commit to lock your latest changes incrementally , rather than doing it all at once after you are done with the changes.
+===========================================================
+
+**Learning Automation** staying focused -- completely new
