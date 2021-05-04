@@ -3,9 +3,10 @@ This is test file to get started
 
 Creating Test Steps
 
-Step 1 : Open CMD and check if Git is present
-Step 2 :Downloaded Git
+Step 1: Open CMD and check if Git is present
+Step 2: Downloaded Git
 Step 3: Create a GITHub Login on the Website.
+Step 4: Check The GIT Verion on Terminal : git --version
 =======
 New line from Ashumi 
 <h1> this is header </h1>
