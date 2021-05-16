@@ -1,0 +1,81 @@
+# Selenium-Automation
+Small Tests
+Use Case
+*********************************************************
+1.Open URL https://www.seleniumeasy.com/Test
+2.Get the title
+3.Assert the Title
+4.Verify Img logo is displayed. 
+5.Close any popup if any
+6.Go to Menulist
+7.Click Input link
+8.Click Any link under it and go to next page
+
+*****************************************************
+TestCase
+package Testing;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestNG1 {
+	WebDriver driver;
+	
+	@BeforeMethod
+	public void setUp() {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
+	    driver.manage().window().maximize();
+		driver.get("https://www.seleniumeasy.com/test/");
+	
+	}
+	
+	@Test(priority=1)
+	public void veifyPage(){
+	String title = driver.getTitle();
+	System.out.println("The Page Title:"+title);
+	Assert.assertEquals(title,"Selenium Easy - Best Demo website to practice Selenium Webdriver Online");		
+	}
+
+	
+	@Test(priority=2)
+	public void vimageVerify() {
+		Boolean logo = driver.findElement(By.xpath("//img[@alt='Selenium Easy']")).isDisplayed();
+		Assert.assertTrue(logo);
+		
+	}
+	
+	@Test
+	public void handleFrameTest() {
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//a[@title='Close']")).click();
+	driver.findElement(By.xpath("//a[text()='Input Forms']")).click();
+	driver.findElement(By.xpath("//*[@id=\"treemenu\"]/li/ul/li[1]/ul/li[1]/a")).click();
+
+	
+	}
+	
+ @AfterMethod
+	public void closePage() {
+		
+		driver.quit();
+    
+	}
+
+}
+	
+	
+
